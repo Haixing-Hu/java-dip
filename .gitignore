@@ -1,12 +1,28 @@
-*.class
+# Eclipse Project
+.classpath
+.project
+.settings
+/target
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+# IDEA Project
+workspace.xml
+tasks.xml
+.idea
+*.iml
 
-# Package Files #
+# Binary Files
+*.ear
 *.jar
 *.war
-*.ear
+*.exe
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+# Log Files
+*.log
+
+# System Cache Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Embedded MySQL database
+.mysqltmp
