@@ -8,21 +8,10 @@
 
 package com.qubit.dip.filter.color;
 
-import com.qubit.dip.ImageProcessor;
-
-import java.awt.image.BufferedImage;
-
 /**
- * The image filter implements the gray scale filter of images.
- *
+ * Created by starfish on 2017/3/27.
+ * @author Jerry Huxtable
  * @author Haixing Hu
  */
-public class GrayScaleFilter implements ImageProcessor {
-
-
-
-  @Override
-  public BufferedImage process(final BufferedImage image) {
-    return null;
-  }
+public class DiffusionFilter {
 }
