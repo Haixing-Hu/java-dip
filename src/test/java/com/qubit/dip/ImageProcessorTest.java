@@ -54,7 +54,7 @@ public abstract class ImageProcessorTest {
       URL url = this.getClass().getResource(RESOURCE_PREFIX + image);
       assertNotNull(url);
       BufferedImage src = ImageIO.read(url);
-      BufferedImage dst = processor.process(src);
+      BufferedImage dst = processor.process(src, null);
       assertNotNull(dst);
       File output = new File(outputDir, getOutputFileName(processor, image));
       ImageIO.write(dst, "jpeg", output);

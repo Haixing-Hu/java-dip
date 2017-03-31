@@ -6,16 +6,20 @@
  *
  ******************************************************************************/
 
-package com.qubit.dip.filter;
+package com.qubit.dip.filter.color;
 
-import com.qubit.dip.AbstractImageProcessor;
+import com.qubit.dip.ImageProcessor;
+import com.qubit.dip.ImageProcessorTest;
 
 /**
- * The base class of image filters.
+ * Unit test of the {@link GrayFilter}.
  *
- * @author Jerry Huxtable
  * @author Haixing Hu
  */
-public abstract class ImageFilter extends AbstractImageProcessor {
-  //  empty
+public class GrayFilterTest extends ImageProcessorTest {
+
+  @Override
+  protected ImageProcessor createProcessor() {
+    return new GrayFilter();
+  }
 }

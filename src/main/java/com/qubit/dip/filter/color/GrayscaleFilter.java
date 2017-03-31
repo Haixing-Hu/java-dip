@@ -31,7 +31,6 @@ import com.qubit.dip.filter.PointFilter;
  *
  * @author Jerry Huxtable
  * @author Haixing Hu
- * @see <a href='http://www.jhlabs.com/ip/filters/GrayscaleFilter.html'>Grayscale Filter</a>
  */
 public final class GrayscaleFilter extends PointFilter {
 

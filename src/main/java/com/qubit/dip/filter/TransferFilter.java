@@ -8,9 +8,10 @@
 
 package com.qubit.dip.filter;
 
+import javax.annotation.Nullable;
 import java.awt.image.BufferedImage;
 
-import static com.qubit.dip.utils.PixelUtils.clamp;
+import static com.qubit.dip.utils.ImageUtils.clamp;
 
 /**
  * The base class of image filters which transforms colors of images point by
@@ -35,11 +36,11 @@ public abstract class TransferFilter extends PointFilter {
     return (a | (r << 16) | (g << 8) | b);
   }
 
-  public BufferedImage process(final BufferedImage input) {
+  public BufferedImage process(final BufferedImage src, @Nullable BufferedImage dst) {
     if (! initialized) {
       initialize();
     }
-    return super.process(input);
+    return super.process(src, dst);
   }
 
   protected void initialize() {
@@ -50,12 +51,10 @@ public abstract class TransferFilter extends PointFilter {
   protected int[] makeTable() {
     int[] table = new int[256];
     for (int i = 0; i < 256; i++) {
-      table[i] = clamp((int) (255 * transferFunction(i / 255.0f)));
+      table[i] = clamp((int)(255 * transferFunction(i / 255.0f)));
     }
     return table;
   }
-
-  protected abstract float transferFunction(float v);
 
   public int[] getLUT() {
     if (! initialized) {
@@ -66,5 +65,9 @@ public abstract class TransferFilter extends PointFilter {
       lut[i] = filterRGB( 0, 0, (i << 24) | (i << 16) | (i << 8) | i );
     }
     return lut;
+  }
+
+  protected float transferFunction(final float v) {
+    return 0;
   }
 }

@@ -10,14 +10,14 @@ package com.qubit.dip.filter.color;
 
 import com.qubit.dip.filter.PointFilter;
 
-import static com.qubit.dip.utils.PixelUtils.clamp;
+import static com.qubit.dip.utils.ImageUtils.clamp;
 
 /**
- * The image filter mixes the RGB channels; i.e., it allows the red, green and
- * blue channels of an image to be mixed into each other.
+ * An image filter which mixes the RGB channels.
  * <p>
- * This filter mixes the RGB channels of an image. For each channel, you specify
- * how much of the other two channels to mix in.
+ * This filter mixes the RGB channels of an image; i.e., it allows the red,
+ * green and blue channels of an image to be mixed into each other. For each
+ * channel, you specify how much of the other two channels to mix in.
  * </p>
  * @author Jerry Huxtable
  * @author Haixing Hu

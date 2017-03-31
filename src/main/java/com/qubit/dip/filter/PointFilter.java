@@ -8,6 +8,7 @@
 
 package com.qubit.dip.filter;
 
+import javax.annotation.Nullable;
 import java.awt.image.BufferedImage;
 import java.awt.image.WritableRaster;
 
@@ -20,14 +21,17 @@ import java.awt.image.WritableRaster;
 public abstract class PointFilter extends ImageFilter {
 
   @Override
-  public BufferedImage process(final BufferedImage input) {
-    final BufferedImage output = createCompatibleImage(input, null);
-    final int width = input.getWidth();
-    final int height = input.getHeight();
+  public BufferedImage process(final BufferedImage src, @Nullable
+          BufferedImage dst) {
+    if (dst == null) {
+      dst = createCompatibleImage(src, null);
+    }
+    final int width = src.getWidth();
+    final int height = src.getHeight();
     final int[] pixels = new int[width];
-    if (input.getType() == BufferedImage.TYPE_INT_ARGB) {
-      final WritableRaster inRaster = input.getRaster();
-      final WritableRaster outRaster = output.getRaster();
+    if (src.getType() == BufferedImage.TYPE_INT_ARGB) {
+      final WritableRaster inRaster = src.getRaster();
+      final WritableRaster outRaster = dst.getRaster();
       for (int y = 0; y < height; ++y) {
         // We try to avoid calling getRGB on images as it causes them to become
         // unmanaged, causing horrible performance problems.
@@ -39,14 +43,14 @@ public abstract class PointFilter extends ImageFilter {
       }
     } else {
       for (int y = 0; y < height; ++y) {
-        input.getRGB(0, y, width, 1, pixels, 0, width);
+        src.getRGB(0, y, width, 1, pixels, 0, width);
         for (int x = 0; x < width; ++x) {
           pixels[x] = filterRGB(x, y, pixels[x]);
         }
-        output.setRGB(0, y, width, 1, pixels, 0, width);
+        dst.setRGB(0, y, width, 1, pixels, 0, width);
       }
     }
-    return output;
+    return dst;
   }
 
   protected abstract int filterRGB(int x, int y, int rgb);
