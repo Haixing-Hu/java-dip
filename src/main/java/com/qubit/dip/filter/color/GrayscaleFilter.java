@@ -18,7 +18,7 @@ import com.qubit.dip.filter.PointFilter;
  * brightness of each pixel and sets the red, green and blue of the output to
  * the brightness value. But what is the brightness? The simplest answer might
  * be that it is the average of the RGB components, but that neglects the way
- * in which the human eye works. The eye is much more sensitive to green and
+ * in which the jsdati eye works. The eye is much more sensitive to green and
  * red than it is to blue, and so we need to take less acount of the blue and
  * more account of the green. The weighting used by {@code GrayscaleFilter} is:
  * </p>

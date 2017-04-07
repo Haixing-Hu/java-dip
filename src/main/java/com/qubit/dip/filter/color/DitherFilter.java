@@ -19,7 +19,7 @@ import com.qubit.dip.filter.PointFilter;
  * If the printer can print shades of gray, we can simply convert the colour
  * image to a grayscale image. If it can only print black or white, we have to
  * use some method of halftoning where black pixels are scattered in a pattern
- * which simulates shades of grey to the human eye. It's also possible to
+ * which simulates shades of grey to the jsdati eye. It's also possible to
  * halftone to more than two shades of grey or to halftone each colour component
  * separately in order to print colour images. Colour pictures in magazines are
  * printed by halftone cyan, magenta, yellow and black separately.
