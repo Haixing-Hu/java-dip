@@ -3,601 +3,68 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
+  <parent>
+    <groupId>cn.njzhyl</groupId>
+    <artifactId>pom-root</artifactId>
+    <version>3.1.0-SNAPSHOT</version>
+  </parent>
+
   <groupId>com.qubit</groupId>
   <artifactId>java-dip</artifactId>
-  <version>0.1.0-SANPSHOT</version>
+  <version>0.1.0</version>
   <packaging>jar</packaging>
   <name>Yet Another Java Digital Image Processing Library</name>
   <url>https://github.com/Haixing-Hu/java-dip</url>
-
-<properties>
-    <!-- General configuration constants -->
-    <jdk.version>1.8</jdk.version>
-    <jdk.javadoc.link>http://docs.oracle.com/javase/8/docs/api/</jdk.javadoc.link>
-    <project.encoding>UTF-8</project.encoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
-    <!-- Version numbers of the maven plugins -->
-    <maven-clean-plugin.version>3.0.0</maven-clean-plugin.version>
-    <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
-    <maven-install-plugin.version>2.5.2</maven-install-plugin.version>
-    <maven-compiler-plugin.version>3.5.1</maven-compiler-plugin.version>
-    <maven-javadoc-plugin.version>2.10.3</maven-javadoc-plugin.version>
-    <maven-source-plugin.version>3.0.0</maven-source-plugin.version>
-    <maven-dependency-plugin.version>2.10</maven-dependency-plugin.version>
-    <maven-assembly-plugin.version>2.6</maven-assembly-plugin.version>
-    <maven-resources-plugin.version>2.7</maven-resources-plugin.version>
-    <maven-surefire-plugin.version>2.19.1</maven-surefire-plugin.version>
-    <maven-failsafe-plugin.version>2.19.1</maven-failsafe-plugin.version>
-    <maven-surefire-report-plugin.version>2.19.1</maven-surefire-report-plugin.version>
-    <maven-project-info-reports-plugin.version>2.8.1</maven-project-info-reports-plugin.version>
-    <maven-war-plugin.version>2.6</maven-war-plugin.version>
-    <maven-site-plugin.version>3.5</maven-site-plugin.version>
-    <maven-shade-plugin.version>2.4.3</maven-shade-plugin.version>
-    <jetty-maven-plugin.version>9.3.8.v20160314</jetty-maven-plugin.version>
-    <javafx-maven-plugin.version>2.0</javafx-maven-plugin.version>
-    <cobertura-maven-plugin.version>2.7</cobertura-maven-plugin.version>
-    <cal10n-maven-plugin.version>0.7.4</cal10n-maven-plugin.version>
-    <antlr4-maven-plugin.version>4.5.2-1</antlr4-maven-plugin.version>
-    <findbugs-maven-plugin.version>3.0.3</findbugs-maven-plugin.version>
-    <maven-pmd-plugin.version>3.6</maven-pmd-plugin.version>
-    <maven-checkstyle-plugin.version>2.13</maven-checkstyle-plugin.version>
-    <emma-maven-plugin.version>1.0-alpha-3</emma-maven-plugin.version>
-    <jacoco-maven-plugin.version>0.7.6.201602180812</jacoco-maven-plugin.version>
-    <taglist-maven-plugin.version>2.4</taglist-maven-plugin.version>
-    <dashboard-maven-plugin.version>1.0.0-beta-1</dashboard-maven-plugin.version>
-    <native2ascii-maven-plugin.version>1.0-beta-1</native2ascii-maven-plugin.version>
-    <versions-maven-plugin.version>2.2</versions-maven-plugin.version>
-    <flyway-maven-plugin.version>4.0</flyway-maven-plugin.version>
-    <swagger-codegen-maven-plugin.version>2.1.5-SNAPSHOT</swagger-codegen-maven-plugin.version>
-
-    <!-- Version numbers for the logging utilities -->
-    <slf4j.version>1.7.21</slf4j.version>
-    <logback.version>1.1.7</logback.version>
-
-    <!-- Version numbers of the 3rd part components -->
-    <junit.version>4.12</junit.version>
-    <hamcrest.version>1.3</hamcrest.version>
-    <hamcrest-matchers.version>1.0.1</hamcrest-matchers.version>
-    <assertj.version>3.6.1</assertj.version>
-    <easymock.version>3.4</easymock.version>
-    <xmlunit.version>1.6</xmlunit.version>
-    <mockito.version>2.0.2-beta</mockito.version>
-    <json-path.version>2.2.0</json-path.version>
-    <dbunit.version>2.5.3</dbunit.version>
-
-    <commons.lang.version>3.5</commons.lang.version>
-    <commons.io.version>2.5</commons.io.version>
-    <commons.logging.version>1.2</commons.logging.version>
-    <commons.logging.api.version>1.1</commons.logging.api.version>
-    <commons.primitives.version>20041207.202534</commons.primitives.version>
-    <commons.collections.version>4.1</commons.collections.version>
-    <commons.beanutils.version>1.9.3</commons.beanutils.version>
-    <commons.configuration.version>2.1</commons.configuration.version>
-    <commons.codec.version>1.10</commons.codec.version>
-    <commons.csv.version>1.4</commons.csv.version>
-    <commons.net.version>3.5</commons.net.version>
-    <commons.dbutils.version>1.6</commons.dbutils.version>
-    <commons.dbcp.version>1.4</commons.dbcp.version>
-    <commons.dbcp2.version>2.1.1</commons.dbcp2.version>
-    <commons.pool.version>1.6</commons.pool.version>
-    <commons.pool2.version>2.4.2</commons.pool2.version>
-    <commons.email.version>1.4</commons.email.version>
-    <commons.fileupload.version>1.3.2</commons.fileupload.version>
-    <commons.compress.version>1.12</commons.compress.version>
-    <commons.math.version>3.6.1</commons.math.version>
-    <commons.exec.version>1.3</commons.exec.version>
-    <commons.vfs.version>2.1</commons.vfs.version>
-    <commons.daemon.version>1.0.15</commons.daemon.version>
-    <commons.cli.version>1.3.1</commons.cli.version>
-    <commons.digester.version>3.2</commons.digester.version>
-    <commons.proxy.version>1.0</commons.proxy.version>
-    <commons.modeler.version>1.1-dev</commons.modeler.version>
-    <commons.launcher.version>1.1</commons.launcher.version>
-    <httpcore.version>4.4.5</httpcore.version>
-    <httpclient.version>4.5.2</httpclient.version>
-    <mina.version>3.0.0-M2</mina.version>
-    <common-annotations.version>3.0.0</common-annotations.version>
-
-    <guava.version>20.0</guava.version>
-    <antlr.version>4.5.3</antlr.version>
-    <joda-time.version>2.9.6</joda-time.version>
-    <jackson.version>2.7.2</jackson.version>
-    <derby.version>10.13.1.1</derby.version>
-    <h2.version>1.4.193</h2.version>
-    <hsqldb.version>2.3.4</hsqldb.version>
-    <log4j.version>2.7</log4j.version>
-    <jsr305.version>3.0.1</jsr305.version>
-    <jchardet.version>1.0</jchardet.version>
-    <xerces.version>2.11.0</xerces.version>
-    <tika.version>1.14</tika.version>
-    <hadoop.version>1.2.1</hadoop.version>
-    <lucene.version>6.2.1</lucene.version>
-    <w3c-sac.version>1.3</w3c-sac.version>
-    <w3c-dom.version>2.3.0-jaxb-1.0.6</w3c-dom.version>
-    <nekohtml.version>0.9.5</nekohtml.version>
-    <htmlcleaner.version>2.18</htmlcleaner.version>
-    <tagsoup.version>1.2.1</tagsoup.version>
-    <rhino.version>1.7R2</rhino.version>
-    <je.version>5.0.73</je.version>
-    <json-lib.version>2.4</json-lib.version>
-    <json-org.version>20160810</json-org.version>
-    <gson.version>2.8.0</gson.version>
-    <spring-framework.version>4.3.4.RELEASE</spring-framework.version>
-    <spring-data.version>1.4.6.RELEASE</spring-data.version>
-    <spring-security.version>4.2.0.RELEASE</spring-security.version>
-    <spring-integration.version>4.3.5.RELEASE</spring-integration.version>
-    <spring-platform.version>2.0.2.RELEASE</spring-platform.version>
-    <aspectj.version>1.8.9</aspectj.version>
-    <cglib.version>3.2.4</cglib.version>
-    <proxool.version>0.8.3</proxool.version>
-    <juniversalchardet.version>1.0.3</juniversalchardet.version>
-    <c3p0.version>0.9.5.2</c3p0.version>
-    <hibernate.version>5.2.5.Final</hibernate.version>
-    <hibernate-jpa-2.version>1.0.1.Final</hibernate-jpa-2.version>
-    <hibernate-validator.version>5.3.3.Final</hibernate-validator.version>
-    <hibernate-search.version>5.7.0.Beta1</hibernate-search.version>
-    <mybatis.version>3.4.1</mybatis.version>
-    <mybatis-spring.version>1.3.0</mybatis-spring.version>
-    <ibatis-sqlmap.version>2.3.4.726</ibatis-sqlmap.version>
-    <struts.version>2.5.5</struts.version>
-    <struts2.json.version>2.3.16</struts2.json.version>
-    <javassist.version>3.12.1.GA</javassist.version>
-    <mysql-connector-java.version>6.0.5</mysql-connector-java.version>
-    <mysql-connector-mxj.version>5.0.12</mysql-connector-mxj.version>
-    <ojdbc14.version>10.2.0.3.0</ojdbc14.version>
-    <cal10n.version>0.8.1</cal10n.version>
-    <jta.version>1.0.1B</jta.version>
-    <servlet-api.version>4.0.0-b01</servlet-api.version>
-    <persistence-api.version>1.0.2</persistence-api.version>
-    <jsp.version>2.2.1-b03</jsp.version>
-    <jstl.version>1.2</jstl.version>
-    <el-api.version>3.0.1-b04</el-api.version>
-    <apache-poi.version>3.16-beta1</apache-poi.version>
-    <jxls.version>2.3.0</jxls.version>
-    <jxls-poi.version>1.0.11</jxls-poi.version>
-    <jxls-jexcel.version>1.0.6</jxls-jexcel.version>
-    <protobuf.version>3.1.0</protobuf.version>
-    <netty.version>5.0.0.Alpha2</netty.version>
-    <quartz.version>2.2.3</quartz.version>
-    <ezmorph.version>1.0.6</ezmorph.version>
-    <cos.version>05Nov2002</cos.version>
-    <freemarker.version>2.3.25-incubating</freemarker.version>
-    <ognl.version>3.1.12</ognl.version>
-    <jpush.version>3.2.11</jpush.version>
-    <apns.version>1.0.0.Beta6</apns.version>
-    <memcached-java-client.version>3.0.2</memcached-java-client.version>
-    <imageio.version>3.2.1</imageio.version>
-    <thumbnailator.version>0.4.8</thumbnailator.version>
-    <ehcache.version>3.2.0.beta1</ehcache.version>
-    <dozer.version>5.5.1</dozer.version>
-    <humble-video.version>0.2.1</humble-video.version>
-    <weixin4j-mp.version>1.7.2</weixin4j-mp.version>
-    <weixin4j-qy.version>1.7.2</weixin4j-qy.version>
-    <weixin4j-server.version>1.1.8</weixin4j-server.version>
-    <easemob4j.version>1.1.3</easemob4j.version>
-    <umeng4j.version>1.1.3</umeng4j.version>
-    <webcollector.version>2.32</webcollector.version>
-    <jbrowserdriver.version>0.17.2</jbrowserdriver.version>
-    <ziplet.version>2.1.2</ziplet.version>
-
-
-    <selenium-server.version>3.0.1</selenium-server.version>
-    <selenium-java.version>3.0.1</selenium-java.version>
-    <selenium-safari-driver.version>3.0.1</selenium-safari-driver.version>
-    <selenium-ie-driver.version>3.0.1</selenium-ie-driver.version>
-    <selenium-firefox-driver.version>3.0.1</selenium-firefox-driver.version>
-    <selenium-edge-driver.version>3.0.1</selenium-edge-driver.version>
-    <selenium-chrome-driver.version>3.0.1</selenium-chrome-driver.version>
-    <selenium-remote-driver.version>3.0.1</selenium-remote-driver.version>
-    <selenium-api.version>3.0.1</selenium-api.version>
-    <selenium-support.version>3.0.1</selenium-support.version>
-    <selenium-htmlunit-driver.version>2.52.0</selenium-htmlunit-driver.version>
-  </properties>
-
-  <profiles>
-    <profile>
-      <id>disable-java8-doclint</id>
-      <activation>
-        <jdk>[1.8,)</jdk>
-      </activation>
-      <properties>
-        <additionalparam>-Xdoclint:none</additionalparam>
-      </properties>
-    </profile>
-  </profiles>
-
-    <!-- Maven plugins used by all projects -->
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>${maven-compiler-plugin.version}</version>
-        <configuration>
-          <source>${jdk.version}</source>
-          <target>${jdk.version}</target>
-          <encoding>${project.encoding}</encoding>
-          <optimize>true</optimize>
-          <compilerArgs>
-            <arg>-Xlint:all</arg>
-          </compilerArgs>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>versions-maven-plugin</artifactId>
-        <version>${versions-maven-plugin.version}</version>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-clean-plugin</artifactId>
-        <version>${maven-clean-plugin.version}</version>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-deploy-plugin</artifactId>
-        <version>${maven-deploy-plugin.version}</version>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-install-plugin</artifactId>
-        <version>${maven-install-plugin.version}</version>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>${maven-surefire-plugin.version}</version>
-        <configuration>
-          <!-- Sets the VM argument line used when unit tests are run. -->
-          <argLine>${surefireArgLine}</argLine>
-          <!-- Skips unit tests if the points of skip.unit.tests property is true -->
-          <skipTests>${skip.unit.measurements}</skipTests>
-          <!-- Excludes integration tests when unit tests are run. -->
-          <!-- <excludes> <exclude>**/IT*.java</exclude> </excludes> -->
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-failsafe-plugin</artifactId>
-        <version>${maven-failsafe-plugin.version}</version>
-        <executions>
-            <!-- Ensures that both integration-test and verify goals of the Failsafe
-              Maven plugin are executed. -->
-            <execution>
-              <id>integration-tests</id>
-              <goals>
-                <goal>integration-test</goal>
-                <goal>verify</goal>
-              </goals>
-              <configuration>
-                <!-- Sets the VM argument line used when integration tests are run. -->
-                <argLine>${failsafeArgLine}</argLine>
-                <!-- Skips integration tests if the points of skip.integration.tests
-                  property is true -->
-                <skipTests>${skip.integration.measurements}</skipTests>
-              </configuration>
-            </execution>
-          </executions>
-      </plugin>
-      <!-- configuraiton of the project-info-reports-plugin -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-project-info-reports-plugin</artifactId>
-        <version>${maven-project-info-reports-plugin.version}</version>
-        <configuration>
-          <dependencyLocationsEnabled>false</dependencyLocationsEnabled>
-        </configuration>
-      </plugin>
-      <!-- configuration of the findbug plugin -->
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>findbugs-maven-plugin</artifactId>
-        <version>${findbugs-maven-plugin.version}</version>
-        <configuration>
-          <xmlOutput>true</xmlOutput>
-          <xmlOutputDirectory>target/site</xmlOutputDirectory>
-          <!-- <excludeFilterFile>findbugs-exclude.xml</excludeFilterFile> -->
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <version>${maven-javadoc-plugin.version}</version>
-        <configuration>
-            <charset>${project.encoding}</charset>
-            <encoding>${project.encoding}</encoding>
-            <docencoding>${project.encoding}</docencoding>
-            <!-- reduce console output. Can override with -Dquiet=false -->
-            <quiet>true</quiet>
-            <source>${jdk.version}</source>
-            <links>
-              <link>${jdk.javadoc.link}</link>
-            </links>
-          </configuration>
-          <executions>
-            <execution>
-              <id>attach-javadoc</id>
-              <goals>
-                <goal>jar</goal>
-              </goals>
-            </execution>
-          </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-resources-plugin</artifactId>
-        <version>${maven-resources-plugin.version}</version>
-        <configuration>
-          <encoding>${project.encoding}</encoding>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.jacoco</groupId>
-        <artifactId>jacoco-maven-plugin</artifactId>
-        <version>${jacoco-maven-plugin.version}</version>
-        <configuration>
-          <outputEncoding>${project.encoding}</outputEncoding>
-          <sourceEncoding>${project.encoding}</sourceEncoding>
-        </configuration>
-        <executions>
-          <!-- Prepares the property pointing to the JaCoCo runtime agent which
-            is passed as VM argument when Maven the Surefire plugin is executed. -->
-          <execution>
-            <id>pre-unit-test</id>
-            <phase>initialize</phase>
-            <goals>
-              <goal>prepare-agent</goal>
-            </goals>
-            <configuration>
-              <!-- Sets the path to the file which contains the execution data. -->
-              <destFile>${project.build.directory}/jacoco.exec</destFile>
-              <!-- Sets the name of the property containing the settings for JaCoCo
-                runtime agent. -->
-              <propertyName>surefireArgLine</propertyName>
-            </configuration>
-          </execution>
-          <!-- Ensures that the code coverage report for unit tests is created
-            after unit tests have been run. -->
-          <execution>
-            <id>post-unit-test</id>
-            <phase>test</phase>
-            <goals>
-              <goal>report</goal>
-            </goals>
-            <configuration>
-              <!-- Sets the path to the file which contains the execution data. -->
-              <dataFile>${project.build.directory}/jacoco.exec</dataFile>
-              <!-- Sets the output directory for the code coverage report. -->
-              <!-- <outputDirectory>${project.reporting.outputDirectory}/jacoco</outputDirectory> -->
-            </configuration>
-          </execution>
-          <execution>
-            <id>pre-integration-test</id>
-            <phase>pre-integration-test</phase>
-            <goals>
-              <goal>prepare-agent-integration</goal>
-            </goals>
-            <configuration>
-              <!-- Sets the path to the file which contains the execution data. -->
-              <destFile>${project.build.directory}/jacoco-it.exec</destFile>
-              <!-- Sets the name of the property containing the settings for JaCoCo
-                runtime agent. -->
-              <propertyName>failsafeArgLine</propertyName>
-            </configuration>
-          </execution>
-          <execution>
-            <id>post-integration-test</id>
-            <phase>post-integration-test</phase>
-            <goals>
-              <goal>report</goal>
-            </goals>
-            <configuration>
-              <!-- Sets the path to the file which contains the execution data. -->
-              <dataFile>${project.build.directory}/jacoco-it.exec</dataFile>
-              <!-- Sets the output directory for the code coverage report. -->
-              <!-- <outputDirectory>${project.reporting.outputDirectory}/jacoco-it</outputDirectory> -->
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>taglist-maven-plugin</artifactId>
-        <version>${taglist-maven-plugin.version}</version>
-        <configuration>
-          <encoding>${project.encoding}</encoding>
-          <tagListOptions>
-            <tagClasses>
-              <tagClass>
-                <displayName>Todo Work</displayName>
-                <tags>
-                  <tag>
-                    <matchString>todo</matchString>
-                    <matchType>ignoreCase</matchType>
-                  </tag>
-                  <tag>
-                    <matchString>FIXME</matchString>
-                    <matchType>exact</matchType>
-                  </tag>
-                </tags>
-              </tagClass>
-            </tagClasses>
-          </tagListOptions>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
-
-  <reporting>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-project-info-reports-plugin</artifactId>
-        <version>${maven-project-info-reports-plugin.version}</version>
-        <reportSets>
-          <reportSet>
-            <reports>
-              <report>summary</report>
-              <report>index</report>
-              <report>dependencies</report>
-              <report>project-team</report>
-              <report>license</report>
-              <report>scm</report>
-              <report>cim</report>
-              <report>mailing-list</report>
-              <report>issue-tracking</report>
-            </reports>
-          </reportSet>
-        </reportSets>
-      </plugin>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>findbugs-maven-plugin</artifactId>
-        <version>${findbugs-maven-plugin.version}</version>
-      </plugin>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>taglist-maven-plugin</artifactId>
-        <version>${taglist-maven-plugin.version}</version>
-      </plugin>
-      <plugin>
-        <groupId>org.jacoco</groupId>
-        <artifactId>jacoco-maven-plugin</artifactId>
-        <version>${jacoco-maven-plugin.version}</version>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-report-plugin</artifactId>
-        <version>${maven-surefire-plugin.version}</version>
-      </plugin>
-      <!-- generate the javadoc report -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <version>${maven-javadoc-plugin.version}</version>
-        <reportSets>
-          <reportSet>
-            <reports>
-              <report>javadoc</report>
-              <report>test-javadoc</report>
-            </reports>
-          </reportSet>
-          <reportSet>
-            <id>aggregate</id>
-            <inherited>false</inherited>
-            <reports>
-              <report>aggregate</report>
-            </reports>
-          </reportSet>
-        </reportSets>
-      </plugin>
-      <!-- generate the versions report -->
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>versions-maven-plugin</artifactId>
-        <version>${versions-maven-plugin.version}</version>
-        <reportSets>
-          <reportSet>
-            <reports>
-              <report>dependency-updates-report</report>
-              <report>plugin-updates-report</report>
-              <report>property-updates-report</report>
-            </reports>
-          </reportSet>
-        </reportSets>
-      </plugin>
-    </plugins>
-  </reporting>
 
   <dependencies>
     <!-- Apache Commons -->
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
-      <version>${commons.lang.version}</version>
-      <type>jar</type>
-      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>commons-io</groupId>
       <artifactId>commons-io</artifactId>
-      <version>${commons.io.version}</version>
-      <type>jar</type>
-      <scope>compile</scope>
     </dependency>
 
     <!-- Annotations -->
     <dependency>
       <groupId>com.google.code.findbugs</groupId>
       <artifactId>jsr305</artifactId>
-      <version>${jsr305.version}</version>
-      <type>jar</type>
-      <scope>compile</scope>
     </dependency>
     <!-- Logging -->
     <dependency>
-        <groupId>org.slf4j</groupId>
-        <artifactId>slf4j-api</artifactId>
-        <version>${slf4j.version}</version>
-        <type>jar</type>
-        <scope>compile</scope>
-      </dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+    </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>jcl-over-slf4j</artifactId>
-      <version>${slf4j.version}</version>
-      <type>jar</type>
-      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>log4j-over-slf4j</artifactId>
-      <version>${slf4j.version}</version>
-      <type>jar</type>
-      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
-      <version>${logback.version}</version>
-      <type>jar</type>
-      <scope>compile</scope>
     </dependency>
     <!-- Testing -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>${junit.version}</version>
-      <type>jar</type>
-      <scope>test</scope>
-      <exclusions>
-        <exclusion>
-          <groupId>org.hamcrest</groupId>
-          <artifactId>hamcrest-core</artifactId>
-        </exclusion>
-      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.hamcrest</groupId>
       <artifactId>hamcrest-all</artifactId>
-      <version>${hamcrest.version}</version>
-      <type>jar</type>
-      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>com.btmatthews.hamcrest</groupId>
       <artifactId>hamcrest-matchers</artifactId>
-      <version>${hamcrest-matchers.version}</version>
-      <type>jar</type>
-      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.assertj</groupId>
       <artifactId>assertj-core</artifactId>
-      <version>${assertj.version}</version>
-      <type>jar</type>
-      <scope>test</scope>
     </dependency>
   </dependencies>
 </project>

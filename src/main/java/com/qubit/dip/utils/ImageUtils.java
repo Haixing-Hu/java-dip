@@ -8,7 +8,7 @@
 
 package com.qubit.dip.utils;
 
-import java.awt.*;
+import java.awt.Color;
 import java.util.Random;
 
 import static java.lang.Math.abs;
@@ -21,7 +21,7 @@ import static java.lang.Math.abs;
  */
 public class ImageUtils {
 
-  private static Random randomGenerator = new Random();
+  private static final Random randomGenerator = new Random();
 
   /**
    * Clamp a value to an interval.
@@ -358,8 +358,8 @@ public class ImageUtils {
       case SATURATION:
       case VALUE:
       case COLOR: {
-        float hsb1[] = Color.RGBtoHSB(r1, g1, b1, null);
-        float hsb2[] = Color.RGBtoHSB(r2, g2, b2, null);
+        float[] hsb1 = Color.RGBtoHSB(r1, g1, b1, null);
+        float[] hsb2 = Color.RGBtoHSB(r2, g2, b2, null);
         switch (op) {
           case HUE:
             hsb2[0] = hsb1[0];
