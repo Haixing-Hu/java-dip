@@ -26,3 +26,5 @@ desktop.ini
 
 # Embedded MySQL database
 .mysqltmp
+
+.flattened-pom.xml
