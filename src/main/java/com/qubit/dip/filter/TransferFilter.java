@@ -1,17 +1,18 @@
-/*******************************************************************************
- *
- *     Copyright (c) 2016.  Haixing Hu @ Qubit Technology Co. Ltd.
- *
- *     All rights reserved.
- *
- ******************************************************************************/
+////////////////////////////////////////////////////////////////////////////////
+//
+//    Copyright (c) 2016 - 2022.
+//    Haixing Hu @ Qubit Technology Co. Ltd.
+//
+//    All rights reserved.
+//
+////////////////////////////////////////////////////////////////////////////////
 
 package com.qubit.dip.filter;
 
-import javax.annotation.Nullable;
-import java.awt.image.BufferedImage;
-
 import static com.qubit.dip.utils.ImageUtils.clamp;
+
+import java.awt.image.BufferedImage;
+import javax.annotation.Nullable;
 
 /**
  * The base class of image filters which transforms colors of images point by

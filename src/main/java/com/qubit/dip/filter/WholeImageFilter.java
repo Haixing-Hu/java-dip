@@ -1,17 +1,18 @@
-/*******************************************************************************
- *
- *    Copyright (c) 2016-2017.  Haixing Hu @ Qubit Technology Co. Ltd.
- *
- *    All rights reserved.
- *
- ******************************************************************************/
+////////////////////////////////////////////////////////////////////////////////
+//
+//    Copyright (c) 2016 - 2022.
+//    Haixing Hu @ Qubit Technology Co. Ltd.
+//
+//    All rights reserved.
+//
+////////////////////////////////////////////////////////////////////////////////
 
 package com.qubit.dip.filter;
 
-import javax.annotation.Nullable;
-import java.awt.*;
+import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 import java.awt.image.WritableRaster;
+import javax.annotation.Nullable;
 
 /**
  * The base class of image filters which need to have the whole image in memory

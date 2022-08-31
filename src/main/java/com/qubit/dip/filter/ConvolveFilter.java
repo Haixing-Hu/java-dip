@@ -1,19 +1,20 @@
-/*******************************************************************************
- *
- *    Copyright (c) 2016-2017.  Haixing Hu @ Qubit Technology Co. Ltd.
- *
- *    All rights reserved.
- *
- ******************************************************************************/
+////////////////////////////////////////////////////////////////////////////////
+//
+//    Copyright (c) 2016 - 2022.
+//    Haixing Hu @ Qubit Technology Co. Ltd.
+//
+//    All rights reserved.
+//
+////////////////////////////////////////////////////////////////////////////////
 
 package com.qubit.dip.filter;
-
-import java.awt.image.BufferedImage;
-import java.awt.image.Kernel;
 
 import static com.qubit.dip.utils.ImageMath.premultiply;
 import static com.qubit.dip.utils.ImageMath.unpremultiply;
 import static com.qubit.dip.utils.ImageUtils.clamp;
+
+import java.awt.image.BufferedImage;
+import java.awt.image.Kernel;
 
 /**
  * The base class of image filters which applies a convolution kernel to an image.

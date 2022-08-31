@@ -1,15 +1,16 @@
-/*******************************************************************************
- *
- *     Copyright (c) 2016.  Haixing Hu @ Qubit Technology Co. Ltd.
- *
- *     All rights reserved.
- *
- ******************************************************************************/
+////////////////////////////////////////////////////////////////////////////////
+//
+//    Copyright (c) 2016 - 2022.
+//    Haixing Hu @ Qubit Technology Co. Ltd.
+//
+//    All rights reserved.
+//
+////////////////////////////////////////////////////////////////////////////////
 
 package com.qubit.dip;
 
-import javax.annotation.Nullable;
 import java.awt.image.BufferedImage;
+import javax.annotation.Nullable;
 
 /**
  * The interface of image processors.

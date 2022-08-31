@@ -1,10 +1,11 @@
-/*******************************************************************************
- *
- *     Copyright (c) 2016.  Haixing Hu @ Qubit Technology Co. Ltd.
- *
- *     All rights reserved.
- *
- ******************************************************************************/
+////////////////////////////////////////////////////////////////////////////////
+//
+//    Copyright (c) 2016 - 2022.
+//    Haixing Hu @ Qubit Technology Co. Ltd.
+//
+//    All rights reserved.
+//
+////////////////////////////////////////////////////////////////////////////////
 
 package com.qubit.dip.filter.color;
 
@@ -313,4 +314,3 @@ public class DitherFilter extends PointFilter {
     return a | (r << 16) | (g << 8) | b;
   }
 }
-

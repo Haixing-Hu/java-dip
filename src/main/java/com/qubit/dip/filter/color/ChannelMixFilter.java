@@ -1,16 +1,17 @@
-/*******************************************************************************
- *
- *     Copyright (c) 2016.  Haixing Hu @ Qubit Technology Co. Ltd.
- *
- *     All rights reserved.
- *
- ******************************************************************************/
+////////////////////////////////////////////////////////////////////////////////
+//
+//    Copyright (c) 2016 - 2022.
+//    Haixing Hu @ Qubit Technology Co. Ltd.
+//
+//    All rights reserved.
+//
+////////////////////////////////////////////////////////////////////////////////
 
 package com.qubit.dip.filter.color;
 
-import com.qubit.dip.filter.PointFilter;
-
 import static com.qubit.dip.utils.ImageUtils.clamp;
+
+import com.qubit.dip.filter.PointFilter;
 
 /**
  * An image filter which mixes the RGB channels.

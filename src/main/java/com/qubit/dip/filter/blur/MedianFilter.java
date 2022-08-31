@@ -1,18 +1,18 @@
-/*******************************************************************************
- *
- *    Copyright (c) 2016-2017.  Haixing Hu @ Qubit Technology Co. Ltd.
- *
- *    All rights reserved.
- *
- ******************************************************************************/
+////////////////////////////////////////////////////////////////////////////////
+//
+//    Copyright (c) 2016 - 2022.
+//    Haixing Hu @ Qubit Technology Co. Ltd.
+//
+//    All rights reserved.
+//
+////////////////////////////////////////////////////////////////////////////////
 
 package com.qubit.dip.filter.blur;
 
-import com.qubit.dip.filter.WholeImageFilter;
-
-import java.awt.*;
-
 import static java.lang.Math.abs;
+
+import com.qubit.dip.filter.WholeImageFilter;
+import java.awt.Rectangle;
 
 /**
  * An image filter which is often used for noise reduction.

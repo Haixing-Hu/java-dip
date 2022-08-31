@@ -1,17 +1,18 @@
-/*******************************************************************************
- *
- *     Copyright (c) 2016.  Haixing Hu @ Qubit Technology Co. Ltd.
- *
- *     All rights reserved.
- *
- ******************************************************************************/
+////////////////////////////////////////////////////////////////////////////////
+//
+//    Copyright (c) 2016 - 2022.
+//    Haixing Hu @ Qubit Technology Co. Ltd.
+//
+//    All rights reserved.
+//
+////////////////////////////////////////////////////////////////////////////////
 
 package com.qubit.dip.filter.color;
 
-import com.qubit.dip.filter.TransferFilter;
-
-import static com.qubit.dip.utils.ImageMath.gain;
 import static com.qubit.dip.utils.ImageMath.bias;
+import static com.qubit.dip.utils.ImageMath.gain;
+
+import com.qubit.dip.filter.TransferFilter;
 
 /**
  * An image filter which adjusts gain and bias of an image.

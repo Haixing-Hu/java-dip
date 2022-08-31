@@ -1,22 +1,22 @@
-/*******************************************************************************
- *
- *    Copyright (c) 2016-2017.  Haixing Hu @ Qubit Technology Co. Ltd.
- *
- *    All rights reserved.
- *
- ******************************************************************************/
+////////////////////////////////////////////////////////////////////////////////
+//
+//    Copyright (c) 2016 - 2022.
+//    Haixing Hu @ Qubit Technology Co. Ltd.
+//
+//    All rights reserved.
+//
+////////////////////////////////////////////////////////////////////////////////
 
 package com.qubit.dip.filter.blur;
-
-import com.qubit.dip.filter.ConvolveFilter;
-
-import java.awt.image.BufferedImage;
-import java.awt.image.Kernel;
 
 import static com.qubit.dip.utils.ImageMath.PI;
 import static com.qubit.dip.utils.ImageUtils.clamp;
 import static java.lang.Math.ceil;
 import static java.lang.Math.exp;
+
+import com.qubit.dip.filter.ConvolveFilter;
+import java.awt.image.BufferedImage;
+import java.awt.image.Kernel;
 
 /**
  * An image filter which performs a Gaussian blur on an image.

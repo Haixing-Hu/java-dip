@@ -1,17 +1,18 @@
-/*******************************************************************************
- *
- *     Copyright (c) 2016.  Haixing Hu @ Qubit Technology Co. Ltd.
- *
- *     All rights reserved.
- *
- ******************************************************************************/
+////////////////////////////////////////////////////////////////////////////////
+//
+//    Copyright (c) 2016 - 2022.
+//    Haixing Hu @ Qubit Technology Co. Ltd.
+//
+//    All rights reserved.
+//
+////////////////////////////////////////////////////////////////////////////////
 
 package com.qubit.dip.utils;
 
+import static java.lang.Math.abs;
+
 import java.awt.Color;
 import java.util.Random;
-
-import static java.lang.Math.abs;
 
 /**
  * Some more useful math functions for image processing.
