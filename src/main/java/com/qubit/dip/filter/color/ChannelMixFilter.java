@@ -9,9 +9,9 @@
 
 package com.qubit.dip.filter.color;
 
-import static com.qubit.dip.utils.ImageUtils.clamp;
-
 import com.qubit.dip.filter.PointFilter;
+
+import static com.qubit.dip.utils.ImageUtils.clamp;
 
 /**
  * An image filter which mixes the RGB channels.

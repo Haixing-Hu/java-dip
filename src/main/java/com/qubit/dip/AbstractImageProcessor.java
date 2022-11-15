@@ -9,11 +9,12 @@
 
 package com.qubit.dip;
 
+import org.apache.commons.lang3.ClassUtils;
+
 import java.awt.image.BufferedImage;
 import java.awt.image.ColorModel;
 import java.awt.image.WritableRaster;
 import javax.annotation.Nullable;
-import org.apache.commons.lang3.ClassUtils;
 
 /**
  * The abstract base class for implementing {@link ImageProcessor}.

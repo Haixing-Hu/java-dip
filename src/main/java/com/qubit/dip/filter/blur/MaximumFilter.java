@@ -9,11 +9,12 @@
 
 package com.qubit.dip.filter.blur;
 
-import static com.qubit.dip.utils.ImageUtils.combinePixels;
-
 import com.qubit.dip.filter.WholeImageFilter;
 import com.qubit.dip.utils.Operation;
+
 import java.awt.Rectangle;
+
+import static com.qubit.dip.utils.ImageUtils.combinePixels;
 
 /**
  * An image filter which is often used for noise reduction.

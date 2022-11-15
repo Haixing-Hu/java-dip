@@ -9,14 +9,16 @@
 
 package com.qubit.dip.filter.blur;
 
-import static com.qubit.dip.utils.ImageMath.PI;
-import static com.qubit.dip.utils.ImageUtils.clamp;
-import static java.lang.Math.ceil;
-import static java.lang.Math.exp;
-
 import com.qubit.dip.filter.ConvolveFilter;
+
 import java.awt.image.BufferedImage;
 import java.awt.image.Kernel;
+
+import static com.qubit.dip.utils.ImageMath.PI;
+import static com.qubit.dip.utils.ImageUtils.clamp;
+
+import static java.lang.Math.ceil;
+import static java.lang.Math.exp;
 
 /**
  * An image filter which performs a Gaussian blur on an image.

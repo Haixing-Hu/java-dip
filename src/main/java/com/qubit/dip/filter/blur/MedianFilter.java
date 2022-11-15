@@ -9,10 +9,11 @@
 
 package com.qubit.dip.filter.blur;
 
-import static java.lang.Math.abs;
-
 import com.qubit.dip.filter.WholeImageFilter;
+
 import java.awt.Rectangle;
+
+import static java.lang.Math.abs;
 
 /**
  * An image filter which is often used for noise reduction.

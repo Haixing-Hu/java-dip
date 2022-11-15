@@ -9,16 +9,17 @@
 
 package com.qubit.dip;
 
-import static org.junit.Assert.assertNotNull;
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.SystemUtils;
+import org.junit.Test;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import javax.imageio.ImageIO;
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.lang3.SystemUtils;
-import org.junit.Test;
+
+import static org.junit.Assert.assertNotNull;
 
 /**
  * Base class for testing the image processors.

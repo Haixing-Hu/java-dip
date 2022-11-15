@@ -9,11 +9,11 @@
 
 package com.qubit.dip.filter.color;
 
+import com.qubit.dip.filter.PointFilter;
+
 import static com.qubit.dip.utils.ImageMath.mixColors;
 import static com.qubit.dip.utils.ImageMath.smoothStep;
 import static com.qubit.dip.utils.ImageUtils.brightness;
-
-import com.qubit.dip.filter.PointFilter;
 
 /**
  * An image filter which performs a threshold operation on an image.

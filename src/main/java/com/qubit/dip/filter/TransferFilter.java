@@ -9,10 +9,10 @@
 
 package com.qubit.dip.filter;
 
-import static com.qubit.dip.utils.ImageUtils.clamp;
-
 import java.awt.image.BufferedImage;
 import javax.annotation.Nullable;
+
+import static com.qubit.dip.utils.ImageUtils.clamp;
 
 /**
  * The base class of image filters which transforms colors of images point by

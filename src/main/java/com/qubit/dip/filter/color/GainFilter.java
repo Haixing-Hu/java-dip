@@ -9,10 +9,10 @@
 
 package com.qubit.dip.filter.color;
 
+import com.qubit.dip.filter.TransferFilter;
+
 import static com.qubit.dip.utils.ImageMath.bias;
 import static com.qubit.dip.utils.ImageMath.gain;
-
-import com.qubit.dip.filter.TransferFilter;
 
 /**
  * An image filter which adjusts gain and bias of an image.
